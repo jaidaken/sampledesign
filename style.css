@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #fafafa;
+  padding: 85px 32px 78px;
+  font-family: "Poppins", sans-serif;
+  color: hsl(229, 6%, 66%);
+  font-size: 15px;
+  font-weight: 200;
+}
+
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  font-weight: 500;
+  font-size: 24px;
+  color: hsl(234, 12%, 34%);
+}
+
+h1 {
+  font-weight: 100;
+  margin-bottom: 1px;
+}
+
+h3 {
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+}
+
+.features {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+}
+
+.features li {
+  position: relative;
+  background-color: #ffffff;
+  flex-flow: column wrap;
+  padding: 28px;
+  margin: auto;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  overflow: hidden;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.features li::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: hsl(180, 62%, 55%);
+}
+
+.features li:nth-child(2)::before {
+  background-color: hsl(0, 78%, 62%);
+}
+
+.features li:nth-child(3)::before {
+  background-color: hsl(34, 97%, 64%);
+}
+
+.features li:nth-child(4)::before {
+  background-color: hsl(212, 86%, 64%);
+}
+
+.features h3 {
+  margin-bottom: 1px;
+}
+
+.features p {
+  padding-bottom: 33px;
+}
+
+.features img {
+  width: 57px;
+  float: right;
+}
+
+article > header {
+  text-align: center;
+  margin-bottom: 76px;
+}
+
+/* tablet */
+@media (min-width: 520px) {
+  .features {
+    flex-flow: column wrap;
+    max-height: 550px;
+    gap: 30px 0px;
+    align-items: center;
+  }
+  .features li {
+    width: calc(50% - 30px);
+    margin: 0;
+  }
+}
+
+/* desktop */
+@media (min-width: 900px) {
+  .features {
+    flex-flow: column wrap;
+    max-height: 550px;
+    gap: 30px 0px;
+    align-items: center;
+  }
+  .features li {
+    width: calc(33% - 60px);
+    margin: auto;
+  }
+  .features li:nth-child(1) {
+    margin-top: 125px;
+    margin-right: 0px;
+  }
+  .features li:nth-child(2) {
+    margin: auto 0px;
+  }
+  .features li:nth-child(3) {
+    margin: auto 0px;
+  }
+  .features li:nth-child(4) {
+    margin-top: 125px;
+    margin-left: 0px;
+  }
+}
